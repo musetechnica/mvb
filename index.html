@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michael V. Ballard - Learning Experience Designer and Developer">
+    <meta name="author" content="Michael V. Ballard">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline';">
+    <title>Michael V. Ballard | Learning Experience Designer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="navbar-section">
+            <div class="logo">
+                <a href="/">
+                    <img src="images/logos/m_logo.jpg" alt="Logo" height="50">
+                </a>
+            </div>
+
+            <button class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#spotlight">Spotlight</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="welcome">
+        <h1>Welcome!</h1>
+        <p>My name is Michael. I craft learning experiences that matter.</p>
+        <a href="#spotlight" class="cta-btn">View Portfolio</a>
+    </section>
+
+    <section id="spotlight">
+        <h2>Spotlight</h2>
+        <div class="grid-container">
+            <article class="spotlight-card">
+                <div class="card-image-container">
+                    <img src="images/projects/coming-soon.png" alt="Project preview">
+                </div>
+                <div class="card-text">
+                    <h3>Design Assistant</h3>
+                    <p>Not a graphic design wiz? No problem! My Ai-powered assistant provides just-in-time
+                        learning for anyone who needs help with graphic design concepts, techniques, or tools in
+                        Serif's Affinity software suite. <a href="https://affinity-bot-y52j.onrender.com"
+                            target="_blank">Try
+                            it!</a></p>
+                </div>
+            </article>
+            <article class="spotlight-card">
+                <div class="card-image-container">
+                    <img src="images/projects/coming-soon.png" alt="Project preview">
+                </div>
+                <div class="card-text">
+                    <h3>Spotlight 2</h3>
+                    <p>A brief description of the project.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="carousel-container" aria-label="Project gallery">
+            <div class="carousel">
+                <article class="slide" role="group" aria-roledescription="slide">
+                    <img src="images/projects/image01.webp" alt="Project 1">
+                    <div class="slide-description">Description</div>
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide">
+                    <img src="images/projects/image02.webp" alt="Project 2">
+                    <div class="slide-description">Description</div>
+                </article>
+                <article class="slide" role="group" aria-roledescription="slide">
+                    <img src="images/projects/image03.webp" alt="Project 3">
+                    <div class="slide-description">Description</div>
+                </article>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous slide">❮</button>
+            <button class="carousel-btn next" aria-label="Next slide">❯</button>
+            <div class="dots" role="tablist" aria-label="Slides"></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div id="confirmationMessage" class="confirmation-message" role="alert">
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. I'll get back to you soon.</p>
+            <button class="btn" onclick="resetFormAndRedirect()">Return Home</button>
+        </div>
+        <form class="contact-form" id="contactForm" action="scripts/phpmail.php" method="POST" autocomplete="off"
+            novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/michaelvballard" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit Michael's LinkedIn profile">
+                <img src="images/logos/logo-linkedin-4096.png" alt="LinkedIn Logo" height="75" width="75">
+            </a>
+        </div>
+        <p>&copy; 2025 Michael V. Ballard. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/carousel.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+
+</html>

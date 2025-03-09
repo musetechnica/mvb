@@ -1,0 +1,7 @@
+# Email configuration file with sensitive data
+scripts/email_config.php
+
+# General PHP files to ignore
+.notes
+*.log
+.env
