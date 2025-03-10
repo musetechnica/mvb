@@ -42,7 +42,7 @@ try {
         $email = $_POST['email'];
         $message = $_POST['message'];
 
-        $mail->Subject = 'Portfolio Inquiry' . $name;
+        $mail->Subject = 'Portfolio Inquiry ';
         $mail->Body    = "Name: $name<br>Email: $email<br><br>Message:<br>$message";
         $mail->AltBody = "Name: $name<br>Email: $email<br><br>Message:<br>$message";
 
