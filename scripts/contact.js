@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const resetButton = document.getElementById('resetButton');
+    if (resetButton) {
+        resetButton.addEventListener('click', resetFormAndRedirect);
+    }
+});
+
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const submitButton = this.querySelector('button[type="submit"]');
@@ -45,5 +52,6 @@ function resetForm() {
 
 function resetFormAndRedirect() {
     resetForm();
-    window.location.href = '/';
+    // Replace window.location.href with this:
+    document.querySelector('.logo a').click();
 }

@@ -23,7 +23,7 @@ try {
     $mail->Port = 587;                                   // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('contact@michaelvballard.com', 'My Contact Form');       //This is the email your form sends From
+    $mail->setFrom('contact@michaelvballard.com', 'Website Mailer');       //This is the email your form sends From
     $mail->addAddress('michaelvballard@outlook.com', 'Michael');            // Add a recipient address
     //$mail->addAddress('contact@example.com');                             // Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
@@ -42,9 +42,9 @@ try {
         $email = $_POST['email'];
         $message = $_POST['message'];
 
-        $mail->Subject = 'New Contact Form Message from ' . $name;
-        $mail->Body    = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-        $mail->AltBody = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+        $mail->Subject = 'Portfolio Inquiry' . $name;
+        $mail->Body    = "Name: $name<br>Email: $email<br><br>Message:<br>$message";
+        $mail->AltBody = "Name: $name<br>Email: $email<br><br>Message:<br>$message";
 
         try {
             $mail->send();
