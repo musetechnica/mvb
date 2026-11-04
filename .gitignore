@@ -5,3 +5,6 @@ scripts/email_config.php
 .notes
 *.log
 .env
+
+# macOS metadata
+.DS_Store
